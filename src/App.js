@@ -18,7 +18,11 @@ class App extends React.Component {
         { title: "home", path: "/" },
         { title: "home", path: "/" },
       ],
-      home: { title: "Hazriq Ishak" },
+      home: {
+        title: "Hazriq Ishak",
+        subtext: "A panic developer.",
+        opener: "At least I'm trying...",
+      },
       about: { title: "About" },
       contact: { title: "Let's talk" },
     };
@@ -41,25 +45,31 @@ class App extends React.Component {
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
-
-                <Route
-                  path="/"
-                  exact
-                  render={() => <HomePage title={this.state.home.title} />}
-                />
-                <Route
-                  path="/about"
-                  exact
-                  render={() => <AboutPage title={this.state.home.title} />}
-                />
-                <Route
-                  path="/contact"
-                  exact
-                  render={() => <ContactPage title={this.state.home.title} />}
-                />
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <HomePage
+                title={this.state.home.title}
+                subtext={this.state.home.subtext}
+                opener={this.state.home.opener}
+              />
+            )}
+          />
+          <Route
+            path="/about"
+            exact
+            render={() => <AboutPage title={this.state.home.title} />}
+          />
+          <Route
+            path="/contact"
+            exact
+            render={() => <ContactPage title={this.state.home.title} />}
+          />
 
           <Footer />
         </Container>
