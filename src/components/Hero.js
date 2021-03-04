@@ -8,10 +8,10 @@ function Hero(props) {
         <Row className="justify-content-center py-5">
           <Col md={8} sm={12}>
             {props.title && (
-              <h1 className="display-1 font-weight-bolder">{props.title}</h1>
+              <h1 className="display-2 font-weight-bolder">{props.title}</h1>
             )}
             {props.subtext && (
-              <h3 className="display-4 font-weight-light">{props.subtext}</h3>
+              <h3 className="display-5 font-weight-light">{props.subtext}</h3>
             )}
             {props.opener && (
               <h4 className="lead font-weight-light">
