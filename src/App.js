@@ -23,7 +23,7 @@ class App extends React.Component {
         subtext: "A panic developer.",
         opener: "At least I'm trying...",
       },
-      about: { title: "About" },
+      about: { title: "About Me" },
       contact: { title: "Let's talk" },
     };
   }
@@ -63,12 +63,12 @@ class App extends React.Component {
           <Route
             path="/about"
             exact
-            render={() => <AboutPage title={this.state.home.title} />}
+            render={() => <AboutPage title={this.state.about.title} />}
           />
           <Route
             path="/contact"
             exact
-            render={() => <ContactPage title={this.state.home.title} />}
+            render={() => <ContactPage title={this.state.contact.title} />}
           />
 
           <Footer />
