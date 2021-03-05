@@ -3,8 +3,8 @@ import { useSpring, animated } from "react-spring";
 
 function CardInfo(props) {
   const style = useSpring({ opacity: 2, from: { opacity: 0 } });
-  const styleOff = useSpring({ opacity: 0, from: { opacity: 2 } });
-  const isSelected = props.selected;
+  // const styleOff = useSpring({ opacity: 0, from: { opacity: 2 } });
+  // const isSelected = props.selected;
 
   console.log(("selected:", props.selected));
 
